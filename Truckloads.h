@@ -5,8 +5,6 @@
 
 class Truckloads
 {
-    private:
-    int number_of_trucks;
 
     public:
     Truckloads();
