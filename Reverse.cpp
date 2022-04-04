@@ -4,7 +4,7 @@
 
 Reverse::Reverse(){}
 
-int Reverse::reverseDigits(int value)
+int Reverse::reverseDigit(int value)
 {
     
     if(value>0)
@@ -12,7 +12,7 @@ int Reverse::reverseDigits(int value)
         
         int remainder=(value%10);
         reversed=(reversed*10)+remainder;
-        reverseDigits(value/10);
+        reverseDigit(value/10);
     }
     return reversed;
 }

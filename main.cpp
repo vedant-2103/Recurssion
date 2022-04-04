@@ -9,7 +9,7 @@ int main()
     std::string att="elohssA a si hsidnaN";
     
 
-    std::cout<<obj.reverseString("elohssA na si hsidnaN")<<""<<att.length()<<std::endl;
+    std::cout<<obj.reverseString(att)<<""<<att.length()<<std::endl;
     return 0;
 
 }
