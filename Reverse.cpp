@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Reverse.h"
 #include <string>
+#include <typeinfo>
 
 Reverse::Reverse(){}
 
@@ -36,8 +37,8 @@ std::string Reverse::reverseString(std::string letters)
         //std::cout<<i<<" "<<letters<<" "<<std::endl;
         letters=reverseString(letters);
     }
-    else
-    {return "ERROR";}
+    //else if(typeof(letters)!=std::string)
+    //{return "ERROR";}
     
     
     return letters;

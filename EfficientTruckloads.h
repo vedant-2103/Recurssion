@@ -7,12 +7,12 @@
 class EfficientTruckloads
 {
     private:
-    vector <int> vectorTrucks;
+    int arrayTrucks[1000000];
 
     public:
     EfficientTruckloads();
     int numTrucks(int numCrates,int loadSize);
-}
+};
 
 
 

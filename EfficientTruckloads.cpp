@@ -3,22 +3,22 @@
 #include <vector>
 #include "EfficientTruckloads.h"
 
-Truckloads::Truckloads(){}
+EfficientTruckloads::EfficientTruckloads(){}
 
-int Truckloads::numTrucks(int numCrates,int loadSize)
+int EfficientTruckloads::numTrucks(int numCrates,int loadSize)
 {
     if(numCrates<=loadSize)
     {return 1;}
     
-    if(vectorTrucks.at(numCrates)!=0)
+    if(arrayTrucks[numCrates]!=0)
     {
-        return vectorTrucks.at(numCrates);
+        return arrayTrucks[numCrates];
     }
     else
     {
         int a=numCrates/2;
         int b=numCrates-(numCrates/2);
-        vectorTrucks.at(numCrates)=numTrucks(a,loadSize)+numTrucks(b,loadSize);
-        return(vectorTrucks.at(numCrates));
+        arrayTrucks[numCrates]=numTrucks(a,loadSize)+numTrucks(b,loadSize);
+        return(arrayTrucks[numCrates]);
     }
 }
