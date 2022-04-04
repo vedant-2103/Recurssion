@@ -1,24 +1,25 @@
 #include <iostream>
 #include "Reverse.h"
 #include <string>
-#include <typeinfo>
+
 
 Reverse::Reverse(){}
 
 int Reverse::reverseDigit(int value)
 {
-    
-    if(value>=0)
+    if(value>0)
     {
         
         int remainder=(value%10);
         reversed=(reversed*10)+remainder;
         reverseDigit(value/10);
     }
-    else
+    else if(value==0)
     {
-        return -1;
+        return 0;
     }
+    else
+    return -1;
     return reversed;
 }
 
@@ -30,7 +31,7 @@ std::string Reverse::reverseString(std::string letters)
     {
         return letters;
     }
-    if (i<(length_string/2))
+    else if(i<(length_string/2))
     {
         char temp=letters[i];
         letters[i]=letters[length_string-i-1];
@@ -39,8 +40,8 @@ std::string Reverse::reverseString(std::string letters)
         //std::cout<<i<<" "<<letters<<" "<<std::endl;
         letters=reverseString(letters);
     }
-    else
-    return "ERROR";
+    //else
+    //return "ERROR";
     //else if(typeof(letters)!=std::string)
     //{return "ERROR";}
     

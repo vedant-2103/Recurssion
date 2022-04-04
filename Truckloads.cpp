@@ -12,14 +12,13 @@ int Truckloads::numTrucks(int numCrates,int loadSize)
     }
     if(numCrates<=0 || loadSize<=0)
     {
-        return 0;
+        return -1;
     }
-    if(numCrates%2)
+    else
     {
         int a=numCrates/2;
         int b=numCrates-(numCrates/2);
         return numTrucks(a,loadSize)+numTrucks(b,loadSize);
     }
-    else
-    {return -1;}
+    
 }

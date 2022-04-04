@@ -7,12 +7,13 @@
 int main()
 {
     Reverse obj;
-    //int res=obj.reverseDigits(82);
+    int res=obj.reverseDigit(0);
+    std::cout<<res;
     //std::string att="elohssA a si hsidnaN";
-    EfficientTruckloads truck;
+    //EfficientTruckloads truck;
     
-    std::cout<<truck.numTrucks(1024,5)<<std::endl;
-    
+    //std::cout<<truck.numTrucks(1024,5)<<std::endl;
+
     //std::cout<<obj.reverseString(att)<<""<<att.length()<<std::endl;
     return 0;
 
