@@ -2,12 +2,12 @@
 #define TRUCKLOADS_H
 #include <iostream>
 #include <string>
-#include <vector>
+#include <unordered_map>
 
 class EfficientTruckloads
 {
     private:
-    int arrayTrucks[1000000];
+    std::unordered_map<int,int>umap;
 
     public:
     EfficientTruckloads();
