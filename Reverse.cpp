@@ -8,7 +8,7 @@ Reverse::Reverse(){}
 int Reverse::reverseDigit(int value)
 {
     
-    if(value>0)
+    if(value>=0)
     {
         
         int remainder=(value%10);
@@ -16,7 +16,9 @@ int Reverse::reverseDigit(int value)
         reverseDigit(value/10);
     }
     else
-    return -1;
+    {
+        return -1;
+    }
     return reversed;
 }
 
@@ -28,7 +30,7 @@ std::string Reverse::reverseString(std::string letters)
     {
         return letters;
     }
-    else if(i<(length_string/2))
+    if (i<(length_string/2))
     {
         char temp=letters[i];
         letters[i]=letters[length_string-i-1];
@@ -37,6 +39,8 @@ std::string Reverse::reverseString(std::string letters)
         //std::cout<<i<<" "<<letters<<" "<<std::endl;
         letters=reverseString(letters);
     }
+    else
+    return "ERROR";
     //else if(typeof(letters)!=std::string)
     //{return "ERROR";}
     
