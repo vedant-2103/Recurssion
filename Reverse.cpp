@@ -14,6 +14,8 @@ int Reverse::reverseDigit(int value)
         reversed=(reversed*10)+remainder;
         reverseDigit(value/10);
     }
+    else
+    return -1;
     return reversed;
 }
 
@@ -33,8 +35,10 @@ std::string Reverse::reverseString(std::string letters)
         i++;
         //std::cout<<i<<" "<<letters<<" "<<std::endl;
         letters=reverseString(letters);
-        
     }
+    else
+    {return "ERROR";}
+    
     
     return letters;
 }
