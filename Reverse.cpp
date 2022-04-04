@@ -31,8 +31,10 @@ std::string Reverse::reverseString(std::string letters)
         letters[i]=letters[length_string-i-1];
         letters[length_string-i-1]=temp;
         i++;
-        reverseString(letters);
+        //std::cout<<i<<" "<<letters<<" "<<std::endl;
+        letters=reverseString(letters);
+        
     }
-
+    
     return letters;
 }
